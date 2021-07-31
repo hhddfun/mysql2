@@ -376,7 +376,7 @@ describe Mysql2::Client do
       @client.query_options[:something].should eql(:else)
       result.instance_variable_get('@query_options')[:something].should eql(:else)
 
-      # Clean up after this test
+      # Clean up after this test "touch:"
       @client.query_options.delete(:something)
       @client.query_options[:something].should be_nil
     end
